@@ -5,7 +5,8 @@ A repo to reproduce some issues with YARN.
 Clone this repo
 
 ```
-git clone 
+git clone https://github.com/belgattitude/test-yarn-uwebsockets.git
+
 ```
 
 ```bash
@@ -16,8 +17,8 @@ ls -la .yarn/cache && ls -la  ~/.yarn/berry/cache
 
 `YARN_ENABLE_GLOBAL_CACHE=false` is read (either from env, either from .yarnrc.yml).
 
-- ✅ will make persist the cache in `.yarn/cache/*.zip`
-- ❌ will save also in global cache `~/.yarn/berry/cache/*.zip`
+- ✅ will persist the cache in `.yarn/cache/*.zip` (useful for CI as it's purged)
+- ❌ will save also in global cache `~/.yarn/berry/cache/*.zip`)
 
 Why doubling ? 
 
