@@ -45,7 +45,10 @@ jobs:
           echo "GLOBAL_CACHE_FOLDER=$(yarn config get globalFolder)" >> $GITHUB_OUTPUT
 
       - name: ⚙️ List global cache
-        run: ls -laR ${{ steps.yarn-config.outputs.GLOBAL_CACHE_FOLDER }}
+        run: ls -laR ${{ steps.yarn-config.outputs.GLOBAL_CACHE_FOLDER }}/cache
 
       - name: ⚙️ List local cache
         run: ls -la ${{ steps.yarn-config.outputs.CACHE_FOLDER }}
+
+      - name: ⚙️ List berry global folder
+        run: ls -laR ${{ steps.yarn-config.outputs.GLOBAL_CACHE_FOLDER }}
