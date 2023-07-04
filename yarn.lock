@@ -3,12 +3,12 @@
 
 __metadata:
   version: 8
-  cacheKey: 10c0
+  cacheKey: 10
 
 "@httpx/exception@npm:1.8.1":
   version: 1.8.1
   resolution: "@httpx/exception@npm:1.8.1"
-  checksum: c62150159220a911cb3a58c06b6a9a2ec69cf10f356f1730cf371dc06cce4ea3559b966aa530081d46016c76b091aa1caefc061e23b4006f1c0c3d617101342a
+  checksum: 20d564e4e67f254f40d90d446985d24d8d2483723a389f8d0fec744e6e0001d299b15cfd64ba98b85a51698c36713532834d84897af2dbc484d20540bbfec5c7
   languageName: node
   linkType: hard
 
