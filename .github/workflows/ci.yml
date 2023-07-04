@@ -30,6 +30,8 @@ jobs:
 
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
+        with:
+          enable-corepack: true
 
 
       - name: ⚙️ Expose yarn config as "$GITHUB_OUTPUT"
