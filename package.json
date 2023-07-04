@@ -8,5 +8,6 @@
   "license": "MIT",
   "dependencies": {
     "@httpx/exception": "1.8.1"
-  }
+  },
+  "packageManager": "yarn@4.0.0-rc.48"
 }

@@ -31,3 +31,16 @@ jobs:
       - name: 📥 Monorepo install
         uses: ./.github/actions/yarn-nm-install
 
+
+      - name: ⚙️ Expose yarn config as "$GITHUB_OUTPUT"
+        id: yarn-config
+        working-directory: ${{ inputs.cwd }}
+        run: |
+          echo "CACHE_FOLDER=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
+          echo "GLOBAL_FOLDER=$(yarn config get globalFolder)" >> $GITHUB_OUTPUT
+
+      - name: ⚙️ Debug caches
+        run: |
+          ls -la ${{ steps.yarn-config.outputs.CACHE_FOLDER }}
+          ls -la ${{ steps.yarn-config.outputs.GLOBAL_FOLDER }}
+
