@@ -4,9 +4,8 @@ A repo to reproduce some issues with YARN.
 
 Clone this repo
 
-```
+```bash
 git clone https://github.com/belgattitude/test-yarn-uwebsockets.git
-
 ```
 
 ```bash
