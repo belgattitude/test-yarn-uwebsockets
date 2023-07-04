@@ -40,8 +40,6 @@ jobs:
 
       - name: ⚙️ Expose yarn config as "$GITHUB_OUTPUT"
         id: yarn-config
-        env:
-          YARN_ENABLE_GLOBAL_CACHE: 'false'
         run: |
           echo "CACHE_FOLDER=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
           echo "GLOBAL_CACHE_FOLDER=$(yarn config get globalFolder)" >> $GITHUB_OUTPUT
