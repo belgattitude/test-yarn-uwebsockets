@@ -20,6 +20,10 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+    env:
+      YARN_ENABLE_GLOBAL_CACHE: 'false'
+      YARN_NM_MODE: 'hardlinks-local'
+
     steps:
       - uses: actions/checkout@v3
 
@@ -28,11 +32,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 📥 Monorepo install
-        uses: ./.github/actions/yarn-nm-install
-        with:
-          enable-corepack: true
+      - name: ⚙️ Enable Corepack
+        run: corepack enable
 
+      - name: 📥 Install dependencies
+        run: yarn install --immutable --inline-builds
 
       - name: ⚙️ Expose yarn config as "$GITHUB_OUTPUT"
         id: yarn-config
