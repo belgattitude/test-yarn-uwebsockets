@@ -37,10 +37,10 @@ jobs:
         working-directory: ${{ inputs.cwd }}
         run: |
           echo "CACHE_FOLDER=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
-          echo "GLOBAL_FOLDER=$(yarn config get globalFolder)" >> $GITHUB_OUTPUT
+          echo "GLOBAL_CACHE_FOLDER=$(yarn config get globalFolder)" >> $GITHUB_OUTPUT
 
-      - name: ⚙️ Debug caches
-        run: |
-          ls -la ${{ steps.yarn-config.outputs.CACHE_FOLDER }}
-          ls -la ${{ steps.yarn-config.outputs.GLOBAL_FOLDER }}
+      - name: ⚙️ List global cache
+        run: ls -la ${{ steps.yarn-config.outputs.GLOBAL_CACHE_FOLDER }}
 
+      - name: ⚙️ List local cache
+        run: ls -la ${{ steps.yarn-config.outputs.CACHE_FOLDER }}
