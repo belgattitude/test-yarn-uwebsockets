@@ -7,7 +7,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "uWebsockets.js": "uNetworking/uWebSockets.js#v20.30.0"
-  },
-  "packageManager": "yarn@4.0.0-rc.48"
+    "@httpx/exception": "1.8.1"
+  }
 }
