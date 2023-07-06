@@ -100,6 +100,7 @@ runs:
       env:
         # Overrides/align yarnrc.yml options (v3, v4) for a CI context
         YARN_ENABLE_GLOBAL_CACHE: 'false' # Use local cache folder to keep downloaded archives
+        YARN_ENABLE_MIRROR: 'false'
         YARN_NM_MODE: 'hardlinks-local' # Reduce node_modules size
         YARN_INSTALL_STATE_PATH: '.yarn/ci-cache/install-state.gz' # Might speed up resolution step when node_modules present
         # Other environment variables
